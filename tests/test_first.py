@@ -27,11 +27,11 @@ class SimpleAndroidTests(unittest.TestCase):
         self.driver = webdriver.Remote('http://192.168.1.207:4723/wd/hub', desired_caps)
         self.driver.save_screenshot(f"results/{sys.argv[1]}-startup.png")
 
-        with open("../colorado.bin", "rb") as f:
-            data = base64.b64encode(f.read()).decode('UTF-8')
-            self.driver.push_file('/sdcard/navit/colorado.bin', data)
+        # with open("../colorado.bin", "rb") as f:
+        #     data = base64.b64encode(f.read()).decode('UTF-8')
+        #     self.driver.push_file('/sdcard/navit/colorado.bin', data)
 
-        # data = open("../colorado.xml", "rb").read()
+        # data = open("colorado.xml", "rb").read()
         # self.driver.push_file('/sdcard/navit/colorado.xml', base64.b64encode(data))
         # data = open("../colorado.bin", "rb").read()
         # self.driver.push_file('/sdcard/navit/colorado.bin', base64.b64encode(data))
@@ -85,9 +85,6 @@ class SimpleAndroidTests(unittest.TestCase):
         except Exception as e:
             pass
         self.driver.save_screenshot(f"results/{sys.argv[1]}-download.png")
-
-        print("Pausing 30s")
-        sleep(30)
 
 
 if __name__ == '__main__':
