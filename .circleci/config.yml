@@ -9,6 +9,6 @@ jobs:
       - run:
           command: pip3 install -r requirements.txt --user
       - run:
-          command: python tests/test_first.py "Mi-9-sdk28" 192.168.1.207:7401
+          command: python run_tests.py
       - store_artifacts:
           path: results
