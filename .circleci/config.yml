@@ -9,4 +9,4 @@ jobs:
       - run:
           command: pip3 install -r requirements.txt --user
       - run:
-          command: python tests/test_first.py
+          command: python tests/test_first.py "Mi-9-sdk28" 192.168.1.207:7401
