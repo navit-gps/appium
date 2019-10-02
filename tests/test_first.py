@@ -24,7 +24,7 @@ class SimpleAndroidTests(unittest.TestCase):
             'autoGrantPermissions': True,
             'app': 'https://17438-30791823-gh.circle-artifacts.com/0/apk/debug/android-debug.apk',
         }
-        self.driver = webdriver.Remote('http://192.168.1.207:4723/wd/hub', desired_caps)
+        self.driver = webdriver.Remote(os.environ['APPIUM_URL'], desired_caps)
         self.driver.save_screenshot(f"results/{sys.argv[1]}-startup.png")
 
         # with open("../colorado.bin", "rb") as f:

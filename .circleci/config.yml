@@ -1,0 +1,10 @@
+version: 2
+
+jobs:
+  check:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run:
+          command: python tests/test_first.py
